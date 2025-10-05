@@ -1,0 +1,111 @@
+📘 Project Overview
+This project provides a detailed **Human Resources (HR) Data Analysis** using **Power BI**, focused on understanding employee demographics, performance, attrition trends, and workforce distribution.  
+
+The goal of the dashboard is to empower HR teams and management to make **data-driven decisions** related to:
+- Employee retention and turnover  
+- Departmental performance  
+- Workforce diversity  
+- Salary and experience analysis  
+
+By visualizing key HR metrics, this dashboard helps organizations identify problem areas, improve retention, and optimize employee engagement strategies.
+
+---
+
+## 🎯 Objectives
+- Analyze employee demographics and experience levels.  
+- Track and reduce **employee attrition (turnover)**.  
+- Compare **salary distribution across departments and job roles**.  
+- Measure **employee satisfaction and performance trends**.  
+- Build a **dynamic Power BI dashboard** for HR insights and reporting.
+
+---
+
+## 📊 Key Performance Indicators (KPIs)
+| KPI | Description |
+|-----|--------------|
+| **Total Employees** | Total active employees in the company |
+| **Attrition Count** | Number of employees who left the organization |
+| **Attrition Rate (%)** | (Attrition Count / Total Employees) × 100 |
+| **Average Age** | Mean employee age across departments |
+| **Average Salary** | Mean salary across roles or departments |
+| **Average Years at Company** | Mean tenure per employee |
+| **Gender Diversity Ratio** | Male-to-female employee ratio |
+| **Job Satisfaction Score** | Average satisfaction rating (if available) |
+
+---
+
+## 🧠 Insights & Findings
+- The **Sales** and **Research & Development** departments have the highest attrition rates.  
+- Employees aged **26–35** show the highest turnover — mainly due to career growth and compensation factors.  
+- **Job role and salary** directly influence attrition likelihood.  
+- **Work-life balance** and **environment satisfaction** are key factors in employee retention.  
+- **Technical roles** have higher average salaries, while **support roles** show higher stability.  
+
+---
+
+## ⚙️ Tools & Technologies
+- **Power BI** – Dashboard design and KPI visualization  
+- **Excel / CSV Data** – HR dataset for analysis  
+- **Power Query** – Data cleaning and transformation  
+- **DAX (Data Analysis Expressions)** – Calculated measures and KPIs  
+- *(Optional)* **SQL / Python (Pandas)** – Preprocessing or validation  
+
+---
+
+## 🧮 Sample DAX Measures
+```DAX
+Total Employees = COUNT(HR[Employee ID])
+
+Attrition Count = CALCULATE(
+    COUNT(HR[Employee ID]),
+    HR[Attrition] = "Yes"
+)
+
+Attrition Rate (%) = DIVIDE([Attrition Count], [Total Employees], 0) * 100
+
+Average Salary = AVERAGE(HR[MonthlyIncome])
+
+Average Tenure = AVERAGE(HR[YearsAtCompany])
+📁 Project Structure
+Copy code
+HR-Analysis/
+│
+├── Data/
+│   └── hr_data.csv
+│
+├── Dashboard/
+│   └── HR_Analysis_PowerBI.pbix
+│
+├── Report/
+│   └── HR_Insights_Report.pdf
+│
+└── README.md
+📈 Dashboard Features
+KPIs Cards – Overview of total employees, attrition rate, average salary, and age.
+
+Department-wise Analysis – Attrition, headcount, and salary comparisons by department.
+
+Demographic Insights – Gender distribution, education level, and experience trends.
+
+Attrition Breakdown – By age, job role, salary, and tenure.
+
+Interactive Filters – Filter by department, gender, age, or education field.
+
+🚀 Results Summary
+Identified key causes of employee attrition and performance trends.
+
+Helped HR managers plan targeted retention strategies.
+
+Improved understanding of salary structure and diversity across the company.
+
+Delivered a data-driven HR dashboard for quick and informed decisions.
+
+🔮 Future Enhancements
+Predictive analysis for employee attrition risk using ML models.
+
+Integration with real-time HR systems (e.g., Workday, SAP HR).
+
+Add employee satisfaction survey analytics.
+
+Include recruitment pipeline and hiring trend visualization.
+
